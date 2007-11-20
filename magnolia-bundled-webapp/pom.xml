@@ -1,0 +1,39 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>info.magnolia</groupId>
+    <artifactId>magnolia-parent-pom</artifactId>
+    <version>1</version>
+  </parent>
+  <groupId>info.magnolia</groupId>
+  <artifactId>magnolia-bundled-webapp</artifactId>
+  <packaging>war</packaging>
+  <name>magnolia-bundled-webapp</name>
+  <version>3.5-SNAPSHOT</version>
+  <scm>
+    <connection>scm:svn:http://svn.magnolia.info/svn/magnolia-bundle/trunk/magnolia-bundled-webapp</connection>
+    <developerConnection>scm:svn:http://svn.magnolia.info/svn/magnolia-bundle/trunk/magnolia-bundled-webapp</developerConnection>
+    <url>http://svn.magnolia.info/view/magnolia-bundle/trunk/magnolia-bundled-webapp</url>
+  </scm>  
+  <dependencies>
+    <dependency>
+      <groupId>info.magnolia</groupId>
+      <artifactId>magnolia-empty-webapp</artifactId>
+      <version>3.5-SNAPSHOT</version>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia</groupId>
+      <artifactId>magnolia-module-samples</artifactId>
+      <version>3.5-SNAPSHOT</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia</groupId>
+      <artifactId>magnolia-module-dms</artifactId>
+      <version>1.2-SNAPSHOT</version>
+      <type>jar</type>
+    </dependency>
+  </dependencies>
+</project>

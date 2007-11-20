@@ -3,16 +3,20 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <artifactId>magnolia-project</artifactId>
+    <artifactId>magnolia-parent-pom</artifactId>
     <groupId>info.magnolia</groupId>
-    <version>3.5-SNAPSHOT</version>
-    <relativePath>../pom.xml</relativePath>
+    <version>1</version>
   </parent>
 
-  <artifactId>magnolia-bundle</artifactId>
+  <artifactId>magnolia-tomcat-bundle</artifactId>
   <packaging>pom</packaging>
-  <name>magnolia-bundle</name>
+  <name>magnolia-tomcat-bundle</name>
   <version>3.5-SNAPSHOT</version>
+  <scm>
+    <connection>scm:svn:http://svn.magnolia.info/svn/magnolia-bundle/trunk/magnolia-tomcat-bundle</connection>
+    <developerConnection>scm:svn:http://svn.magnolia.info/svn/magnolia-bundle/trunk/magnolia-tomcat-bundle</developerConnection>
+    <url>http://svn.magnolia.info/view/magnolia-bundle/trunk/magnolia-tomcat-bundle</url>
+  </scm>
 
   <build>
     <plugins>
@@ -80,22 +84,9 @@
   <dependencies>
     <dependency>
       <groupId>info.magnolia</groupId>
-      <artifactId>magnolia-empty-webapp</artifactId>
+      <artifactId>magnolia-bundled-webapp</artifactId>
       <version>3.5-SNAPSHOT</version>
       <type>war</type>
-    </dependency>
-    <dependency>
-      <groupId>info.magnolia</groupId>
-      <artifactId>magnolia-module-dms</artifactId>
-      <version>1.2-SNAPSHOT</version>
-      <classifier>module-bundle</classifier>
-      <type>tar.gz</type>
-    </dependency>
-    <dependency>
-      <groupId>info.magnolia</groupId>
-      <artifactId>magnolia-module-dms</artifactId>
-      <version>1.2-SNAPSHOT</version>
-      <type>jar</type>
     </dependency>
     <dependency>
       <groupId>info.magnolia</groupId>
@@ -103,25 +94,6 @@
       <version>3.5-SNAPSHOT</version>
       <classifier>module-bundle</classifier>
       <type>tar.gz</type>
-    </dependency>
-    <!--<dependency>-->
-      <!--<groupId>info.magnolia</groupId>-->
-      <!--<artifactId>magnolia-module-workflow</artifactId>-->
-      <!--<version>3.5-SNAPSHOT</version>-->
-      <!--<type>jar</type>-->
-    <!--</dependency>-->
-    <dependency>
-      <groupId>info.magnolia</groupId>
-      <artifactId>magnolia-module-samples</artifactId>
-      <version>3.5-SNAPSHOT</version>
-      <classifier>module-bundle</classifier>
-      <type>tar.gz</type>
-    </dependency>
-    <dependency>
-      <groupId>info.magnolia</groupId>
-      <artifactId>magnolia-module-samples</artifactId>
-      <version>3.5-SNAPSHOT</version>
-      <type>jar</type>
     </dependency>
   </dependencies>
 </project>
