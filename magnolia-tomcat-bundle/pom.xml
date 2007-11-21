@@ -10,14 +10,13 @@
 
   <artifactId>magnolia-tomcat-bundle</artifactId>
   <packaging>pom</packaging>
-  <name>magnolia-tomcat-bundle</name>
   <version>3.5-SNAPSHOT</version>
+  <name>magnolia-tomcat-bundle</name>
   <scm>
     <connection>scm:svn:http://svn.magnolia.info/svn/magnolia-bundle/trunk/magnolia-tomcat-bundle</connection>
     <developerConnection>scm:svn:http://svn.magnolia.info/svn/magnolia-bundle/trunk/magnolia-tomcat-bundle</developerConnection>
     <url>http://svn.magnolia.info/view/magnolia-bundle/trunk/magnolia-tomcat-bundle</url>
   </scm>
-
   <build>
     <plugins>
       <plugin>
