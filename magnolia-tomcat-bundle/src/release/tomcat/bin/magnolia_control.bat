@@ -1,5 +1,5 @@
 @echo off
-rem -- the $JDKPath variable can be replaced by external tools such as an installer
+rem -- the $JDKPath variable can be replaced in this script by external tools such as an installer
 if exist "$JDKPath" set JAVA_HOME=$JDKPath
 
 if ""%1"" == ""start"" goto doStart
