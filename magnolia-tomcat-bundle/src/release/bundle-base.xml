@@ -6,7 +6,7 @@
       <directory>target/extracted-tomcat/apache-tomcat-5.5.25</directory>
       <outputDirectory>apache-tomcat-5.5.25</outputDirectory>
       <excludes>
-        <!-- if we want to only exclude specific default webapps, the trailing slash is needed :
+        <!-- if we wanted to only exclude specific default webapps, the trailing slash is needed :
         <exclude>webapps/balancer/</exclude>
         <exclude>webapps/jsp-examples/</exclude>
         <exclude>webapps/servlets-examples/</exclude>

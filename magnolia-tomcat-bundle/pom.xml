@@ -54,9 +54,11 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
-        <version>2.2-beta-2-magnolia-20071115</version>
-        <!--<version>2.2-beta-1</version>-->
-        <!--<version>2.1.1-magnolia</version>-->
+        <!-- Needs at least version 2.2-beta-2 of the maven-assembly-plugin, for it resolves the following issues:
+             http://jira.codehaus.org/browse/MASSEMBLY-73
+             http://jira.codehaus.org/browse/MASSEMBLY-221
+             http://jira.codehaus.org/browse/MASSEMBLY-250 -->
+        <version>2.2-beta-2-magnolia-20071126</version>
         <executions>
           <execution>
             <!-- using the same id as the parent to override its configuration ! -->
