@@ -93,7 +93,7 @@
       <groupId>info.magnolia</groupId>
       <artifactId>magnolia-module-workflow</artifactId>
       <version>3.5-SNAPSHOT</version>
-      <classifier>module-bundle</classifier>
+      <classifier>bundle</classifier>
       <type>tar.gz</type>
     </dependency>
   </dependencies>
