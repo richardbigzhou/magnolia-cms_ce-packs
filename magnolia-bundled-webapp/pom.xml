@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>info.magnolia</groupId>
@@ -11,14 +10,14 @@
   <packaging>war</packaging>
   <name>magnolia-bundled-webapp</name>
   <description>Magnolia pre-installed with DMS and samples.</description>
-  <version>3.5-SNAPSHOT</version>
+  <version>3.5-rc2</version>
   <properties>
     <magnoliaEdition>Community Edition</magnoliaEdition>
   </properties>  
   <scm>
-    <connection>scm:svn:http://svn.magnolia.info/svn/magnolia-bundle/trunk/magnolia-bundled-webapp</connection>
-    <developerConnection>scm:svn:http://svn.magnolia.info/svn/magnolia-bundle/trunk/magnolia-bundled-webapp</developerConnection>
-    <url>http://svn.magnolia.info/view/magnolia-bundle/trunk/magnolia-bundled-webapp</url>
+    <connection>scm:svn:http://svn.magnolia.info/svn/magnolia-bundle/tags/magnolia-bundled-webapp-3.5-rc2</connection>
+    <developerConnection>scm:svn:http://svn.magnolia.info/svn/magnolia-bundle/tags/magnolia-bundled-webapp-3.5-rc2</developerConnection>
+    <url>http://svn.magnolia.info/view/magnolia-bundle/tags/magnolia-bundled-webapp-3.5-rc2</url>
   </scm>  
   <dependencies>
     <dependency>
