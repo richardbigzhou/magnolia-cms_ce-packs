@@ -10,16 +10,16 @@
 
   <artifactId>magnolia-tomcat-bundle</artifactId>
   <packaging>pom</packaging>
-  <version>3.5-SNAPSHOT</version>
+  <version>3.5-rc2</version>
   <name>magnolia-tomcat-bundle</name>
   <description>Magnolia bundled with Tomcat 5.5</description>
   <properties>
     <magnoliaEdition>Community Edition</magnoliaEdition>
   </properties>
   <scm>
-    <connection>scm:svn:http://svn.magnolia.info/svn/magnolia-bundle/trunk/magnolia-tomcat-bundle</connection>
-    <developerConnection>scm:svn:http://svn.magnolia.info/svn/magnolia-bundle/trunk/magnolia-tomcat-bundle</developerConnection>
-    <url>http://svn.magnolia.info/view/magnolia-bundle/trunk/magnolia-tomcat-bundle</url>
+    <connection>scm:svn:http://svn.magnolia.info/svn/magnolia-bundle/tags/magnolia-tomcat-bundle-3.5-rc2</connection>
+    <developerConnection>scm:svn:http://svn.magnolia.info/svn/magnolia-bundle/tags/magnolia-tomcat-bundle-3.5-rc2</developerConnection>
+    <url>http://svn.magnolia.info/view/magnolia-bundle/tags/magnolia-tomcat-bundle-3.5-rc2</url>
   </scm>
   <build>
     <plugins>
