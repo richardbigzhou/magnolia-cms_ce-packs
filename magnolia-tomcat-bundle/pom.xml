@@ -137,13 +137,13 @@
     <dependency>
       <groupId>info.magnolia</groupId>
       <artifactId>magnolia-bundled-webapp</artifactId>
-      <version>3.5-SNAPSHOT</version>
+      <version>3.5-rc2</version>
       <type>war</type>
     </dependency>
     <dependency>
       <groupId>info.magnolia</groupId>
       <artifactId>magnolia-module-workflow</artifactId>
-      <version>3.5-SNAPSHOT</version>
+      <version>3.5-rc2</version>
       <classifier>bundle</classifier>
       <type>tar.gz</type>
     </dependency>
