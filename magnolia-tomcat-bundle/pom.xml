@@ -12,6 +12,10 @@
   <packaging>pom</packaging>
   <version>3.5-SNAPSHOT</version>
   <name>magnolia-tomcat-bundle</name>
+  <description>Magnolia bundled with Tomcat 5.5</description>
+  <properties>
+    <magnoliaEdition>Community Edition</magnoliaEdition>
+  </properties>
   <scm>
     <connection>scm:svn:http://svn.magnolia.info/svn/magnolia-bundle/trunk/magnolia-tomcat-bundle</connection>
     <developerConnection>scm:svn:http://svn.magnolia.info/svn/magnolia-bundle/trunk/magnolia-tomcat-bundle</developerConnection>
@@ -19,6 +23,53 @@
   </scm>
   <build>
     <plugins>
+      <plugin>
+        <groupId>info.magnolia</groupId>
+        <artifactId>maven-setproperty-plugin</artifactId>
+        <version>1.0.1</version>
+        <executions>
+          <!-- set the current date -->
+          <execution>
+            <phase>generate-resources</phase>
+            <id>currentDate</id>
+            <goals>
+              <goal>set-property</goal>
+            </goals>
+            <configuration>
+              <properties>
+                <property implementation="info.magnolia.maven.setproperty.CurrentDateValueProvider">
+                  <name>magnoliaCurrentDate</name>
+                  <format>d. MMMM yyyy</format>
+                </property>
+                <!-- don't use magnolia.version. By some plugins it would get treated as project.version -->
+                <property implementation="info.magnolia.maven.setproperty.VersionNameValueProvider">
+                  <name>magnoliaNiceVersion</name>
+                </property>
+                <!-- set the release date (default current) -->
+                <property implementation="info.magnolia.maven.setproperty.CurrentDateValueProvider">
+                  <name>magnoliaReleaseDate</name>
+                  <format>d. MMMM yyyy</format>
+                </property>
+              </properties>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-remote-resources-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>process</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <resourceBundles>
+            <resourceBundle>info.magnolia:magnolia-build-tools-dual-licensed:1.2</resourceBundle>
+          </resourceBundles>
+        </configuration>
+      </plugin>      
       <plugin>
         <groupId>info.magnolia</groupId>
         <artifactId>maven-bundle-plugin</artifactId>

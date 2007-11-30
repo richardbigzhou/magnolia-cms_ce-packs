@@ -50,6 +50,13 @@
       <filtered>true</filtered>
       <lineEnding>crlf</lineEnding>
     </fileSet>
+    <fileSet>
+      <directory>target/maven-shared-archive-resources</directory>
+      <outputDirectory></outputDirectory>
+      <!-- filtering here is probably redundant -->
+      <filtered>true</filtered>
+      <lineEnding>crlf</lineEnding>
+    </fileSet>
   </fileSets>
 
   <dependencySets>
