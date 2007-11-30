@@ -10,7 +10,11 @@
   <artifactId>magnolia-bundled-webapp</artifactId>
   <packaging>war</packaging>
   <name>magnolia-bundled-webapp</name>
+  <description>A Magnolia webapp bundled and pre-installed with DMS and samples.</description>
   <version>3.5-SNAPSHOT</version>
+  <properties>
+    <magnoliaEdition>Community Edition</magnoliaEdition>
+  </properties>  
   <scm>
     <connection>scm:svn:http://svn.magnolia.info/svn/magnolia-bundle/trunk/magnolia-bundled-webapp</connection>
     <developerConnection>scm:svn:http://svn.magnolia.info/svn/magnolia-bundle/trunk/magnolia-bundled-webapp</developerConnection>
@@ -35,5 +39,86 @@
       <version>1.2-SNAPSHOT</version>
       <type>jar</type>
     </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
+
+  <!-- copied from magnolia-empty-webapp, in order to override its txt files : -->
+  <build>
+    <resources>
+      <resource>
+        <!-- these are the resources copied by the remote-resources-plugin -->
+        <directory>${project.build.directory}/maven-shared-archive-resources</directory>
+        <excludes>
+          <exclude>**/*</exclude>
+        </excludes>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <groupId>info.magnolia</groupId>
+        <artifactId>maven-setproperty-plugin</artifactId>
+        <version>1.0.1</version>
+        <executions>
+          <!-- set the current date -->
+          <execution>
+            <phase>generate-resources</phase>
+            <id>currentDate</id>
+            <goals>
+              <goal>set-property</goal>
+            </goals>
+            <configuration>
+              <properties>
+                <property implementation="info.magnolia.maven.setproperty.CurrentDateValueProvider">
+                  <name>magnoliaCurrentDate</name>
+                  <format>d. MMMM yyyy</format>
+                </property>
+                <!-- don't use magnolia.version. By some plugins it would get treated as project.version -->
+                <property implementation="info.magnolia.maven.setproperty.VersionNameValueProvider">
+                  <name>magnoliaNiceVersion</name>
+                </property>
+                <!-- set the release date (default current) -->
+                <property implementation="info.magnolia.maven.setproperty.CurrentDateValueProvider">
+                  <name>magnoliaReleaseDate</name>
+                  <format>d. MMMM yyyy</format>
+                </property>
+              </properties>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>      
+      <plugin>
+        <artifactId>maven-remote-resources-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>process</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <resourceBundles>
+            <resourceBundle>info.magnolia:magnolia-build-tools-dual-licensed:1.2</resourceBundle>
+          </resourceBundles>
+        </configuration>
+      </plugin>      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <configuration>
+          <webResources>
+            <resource>
+              <!-- these are the resources copied by the remote-resources-plugin -->
+              <directory>${project.build.directory}/maven-shared-archive-resources</directory>
+            </resource>
+          </webResources>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
 </project>
