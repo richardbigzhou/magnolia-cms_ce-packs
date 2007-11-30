@@ -10,7 +10,7 @@
   <artifactId>magnolia-bundled-webapp</artifactId>
   <packaging>war</packaging>
   <name>magnolia-bundled-webapp</name>
-  <description>A Magnolia webapp bundled and pre-installed with DMS and samples.</description>
+  <description>Magnolia pre-installed with DMS and samples.</description>
   <version>3.5-SNAPSHOT</version>
   <properties>
     <magnoliaEdition>Community Edition</magnoliaEdition>
