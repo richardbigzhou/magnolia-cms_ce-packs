@@ -36,19 +36,23 @@ package info.magnolia.module.webapp.gwt.client;
 import java.util.Map;
 
 import info.magnolia.module.genuinecentral.gwt.client.AdminCentral;
+import info.magnolia.module.genuinecentral.gwt.client.MagnoliaService;
 
 import com.extjs.gxt.ui.client.Registry;
 import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.user.client.ui.RootPanel;
 
-public class AllTogether implements EntryPoint {
+public class AdminCentralGWTModuleAggregatorEntryPoint implements EntryPoint {
 
     public void onModuleLoad() {
         for (Map.Entry<String, Object> module : Registry.getAll().entrySet()) {
             System.out.println("(In All) Found registered module: " + module.getKey() + " :: " + module.getValue());
         }
 
-        AdminCentral central = Registry.get("adminCentral");
-        central.init();
+        // TODO: initialize the service with specific connection to server? ... this is probably the point where we can redirect client to other backing server
+        AdminCentral central = new AdminCentral(new MagnoliaService(), null);
+        Registry.register(AdminCentral.ADMIN_CENTRAL, central);
+        central.init(RootPanel.get());
     }
 
 }
