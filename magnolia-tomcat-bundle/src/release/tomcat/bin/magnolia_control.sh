@@ -16,6 +16,14 @@ PRGDIR=`dirname "$PRG"`
 #---
 
 if [ "$1" = "start" ] ; then
+    # check the number of allowed file descriptors and issue warning it's too low
+    max_files=`sysctl -n fs.file-max 2> /dev/null || sysctl -n kern.maxfiles 2> /dev/null`; echo $num
+    max_process_files=`ulimit -n`
+    if [ "$max_files" -lt 15000 ] || [ "$max_process_files" -lt 5000 ]; then
+        echo "[WARN]: The max open files limit allowed by your system may be too low."
+        echo "[WARN]: See https://documentation.magnolia-cms.com/display/DOCS/Known+issues#Knownissues-Toomanyopenfiles for more information."
+    fi
+
     # create public webapp when "installed" file and "magnoiaPublic/WEB-INF" directory doesn't exist
     if [ ! -e "$PRGDIR/.installed" ] && [ ! -d "$PRGDIR/../webapps/magnoliaPublic/WEB-INF" ] ; then
       echo "First run -> create magnoliaPublic webapp from magnoliaAuthor webapp."
