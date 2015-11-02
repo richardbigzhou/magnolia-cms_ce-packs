@@ -1,5 +1,8 @@
 #!/bin/sh
 
+MAX_FILES_INSTALL_MINIMUM=15000
+MAX_PROCESS_FILES_INSTALL_MINIMUM=5000
+
 #--- this was copied from the tomcat scripts ...
 # resolve links - $0 may be a softlink
 PRG="$0"
@@ -19,9 +22,21 @@ if [ "$1" = "start" ] ; then
     # check the number of allowed file descriptors and issue warning it's too low
     max_files=`sysctl -n fs.file-max 2> /dev/null || sysctl -n kern.maxfiles 2> /dev/null`; echo $num
     max_process_files=`ulimit -n`
-    if [ "$max_files" -lt 15000 ] || [ "$max_process_files" -lt 5000 ]; then
-        echo "[WARN]: The max open files limit allowed by your system may be too low."
-        echo "[WARN]: See https://documentation.magnolia-cms.com/display/DOCS/Known+issues#Knownissues-Toomanyopenfiles for more information."
+    ignore_open_files_limit=false
+    for var in "$@"
+    do
+        if [ "$var" = "--ignore-open-files-limit" ]; then
+            ignore_open_files_limit=true
+        fi
+    done
+
+    if [ $ignore_open_files_limit = false ] && ([ "$max_files" -lt $MAX_FILES_INSTALL_MINIMUM ] || [ "$max_process_files" -lt $MAX_PROCESS_FILES_INSTALL_MINIMUM ]); then
+        echo "[ERROR]: #######################################################################################################################"
+        echo "[ERROR]: The max open files limit allowed by your system may be too low."
+        echo "[ERROR]: See https://documentation.magnolia-cms.com/display/DOCS/Known+issues#Knownissues-Toomanyopenfiles for more information."
+        echo "[ERROR]: If you want to suppress this check, use --ignore-open-files-limit flag."
+        echo "[ERROR]: #######################################################################################################################"
+        exit 1
     fi
 
     # create public webapp when "installed" file and "magnoiaPublic/WEB-INF" directory doesn't exist
