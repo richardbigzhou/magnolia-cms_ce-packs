@@ -8,9 +8,9 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
   <groupId>info.magnolia.bundle</groupId>
-  <artifactId>magnolia-bundled-webapp</artifactId>
+  <artifactId>magnolia-community-demo-webapp</artifactId>
   <packaging>war</packaging>
-  <name>magnolia-bundled-webapp</name>
+  <name>magnolia-community-demo-webapp</name>
   <description>Magnolia webapp pre-bundled with the DAM module and Magnolia Templating Essentials.</description>
   <dependencies>
     <dependency>

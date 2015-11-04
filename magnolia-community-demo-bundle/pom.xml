@@ -8,10 +8,10 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
   <groupId>info.magnolia.bundle</groupId>
-  <artifactId>magnolia-tomcat-bundle</artifactId>
+  <artifactId>magnolia-community-demo-bundle</artifactId>
   <packaging>pom</packaging>
-  <name>magnolia-tomcat-bundle</name>
-  <description>Magnolia bundled with Apache Tomcat</description>
+  <name>magnolia-community-demo-bundle</name>
+  <description>Magnolia bundled with demo and Apache Tomcat</description>
 
   <properties>
     <tomcatVersion>7.0.64</tomcatVersion>
@@ -80,12 +80,12 @@
     </dependency>
     <dependency>
       <groupId>info.magnolia.bundle</groupId>
-      <artifactId>magnolia-bundled-webapp</artifactId>
+      <artifactId>magnolia-community-demo-webapp</artifactId>
       <type>war</type>
     </dependency>
     <dependency>
       <groupId>info.magnolia.bundle</groupId>
-      <artifactId>magnolia-bundled-webapp</artifactId>
+      <artifactId>magnolia-community-demo-webapp</artifactId>
       <!-- This is also to give hints to README/NOTICE files -->
       <type>pom</type>
     </dependency>

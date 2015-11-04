@@ -49,13 +49,13 @@
       <!-- Deps to reactor (self) -->
       <dependency>
         <groupId>info.magnolia.bundle</groupId>
-        <artifactId>magnolia-bundled-webapp</artifactId>
+        <artifactId>magnolia-community-demo-webapp</artifactId>
         <version>${project.version}</version>
         <type>war</type>
       </dependency>
       <dependency>
         <groupId>info.magnolia.bundle</groupId>
-        <artifactId>magnolia-bundled-webapp</artifactId>
+        <artifactId>magnolia-community-demo-webapp</artifactId>
         <version>${project.version}</version>
         <type>pom</type>
       </dependency>
@@ -64,8 +64,8 @@
   </dependencyManagement>
 
   <modules>
-    <module>magnolia-bundled-webapp</module>
-    <module>magnolia-tomcat-bundle</module>
+    <module>magnolia-community-demo-webapp</module>
+    <module>magnolia-community-demo-bundle</module>
   </modules>
 
   <build>
