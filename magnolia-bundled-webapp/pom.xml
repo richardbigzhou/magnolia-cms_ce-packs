@@ -23,6 +23,15 @@
       <artifactId>magnolia-community-webapp</artifactId>
       <type>pom</type>
     </dependency>
+
+    <!-- This dependency is not required anymore, but we still maintain it in order to be backwards-compatible.
+    The module used to be brought in transitively by mte/stk.
+    This dependency will be removed in future versions. -->
+    <dependency>
+      <groupId>info.magnolia</groupId>
+      <artifactId>magnolia-module-inplace-templating</artifactId>
+    </dependency>
+
     <dependency>
       <groupId>info.magnolia.demo</groupId>
       <artifactId>magnolia-travel-demo</artifactId>
