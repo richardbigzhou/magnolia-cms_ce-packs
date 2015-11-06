@@ -13,9 +13,9 @@
   <name>magnolia-packs-community-parent</name>
 
   <scm>
-    <connection>scm:git:http://git.magnolia-cms.com/ce-packs</connection>
-    <developerConnection>scm:git:https://git.magnolia-cms.com/ce-packs</developerConnection>
-    <url>http://git.magnolia-cms.com/gitweb/?p=ce-packs</url>
+    <connection>scm:git:ssh://git@git.magnolia-cms.com/PLATFORM/ce-packs</connection>
+    <developerConnection>scm:git:ssh://git@git.magnolia-cms.com/PLATFORM/ce-packs</developerConnection>
+    <url>https://git.magnolia-cms.com/projects/PLATFORM/repos/ce-packs</url>
     <tag>HEAD</tag>
   </scm>
 
