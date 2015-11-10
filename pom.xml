@@ -36,7 +36,6 @@
 
   <dependencyManagement>
     <dependencies>
-
       <!-- Importing depMgt -->
       <dependency>
         <groupId>info.magnolia.bundle</groupId>
@@ -44,6 +43,13 @@
         <version>${magnoliaCEVersion}</version>
         <type>pom</type>
         <scope>import</scope>
+        <exclusions>
+          <exclusion>
+            <!-- magnolia-bundled-webapp should not be used from depMan anymore, it's a relocation module now -->
+            <groupId>info.magnolia.bundle</groupId>
+            <artifactId>magnolia-bundled-webapp</artifactId>
+          </exclusion>
+        </exclusions>
       </dependency>
 
       <!-- Deps to reactor (self) -->
@@ -59,7 +65,6 @@
         <version>${project.version}</version>
         <type>pom</type>
       </dependency>
-
     </dependencies>
   </dependencyManagement>
 
