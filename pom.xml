@@ -9,14 +9,14 @@
   <groupId>info.magnolia.bundle</groupId>
   <artifactId>magnolia-packs-community-parent</artifactId>
   <packaging>pom</packaging>
-  <version>5.4.4-SNAPSHOT</version>
+  <version>5.4.4</version>
   <name>magnolia-packs-community-parent</name>
 
   <scm>
     <connection>scm:git:ssh://git@git.magnolia-cms.com/PLATFORM/ce-packs</connection>
     <developerConnection>scm:git:ssh://git@git.magnolia-cms.com/PLATFORM/ce-packs</developerConnection>
     <url>https://git.magnolia-cms.com/projects/PLATFORM/repos/ce-packs</url>
-    <tag>HEAD</tag>
+    <tag>magnolia-packs-community-5.4.4</tag>
   </scm>
 
   <properties>
