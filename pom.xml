@@ -16,7 +16,7 @@
     <connection>scm:git:ssh://git@git.magnolia-cms.com/PLATFORM/ce-packs</connection>
     <developerConnection>scm:git:ssh://git@git.magnolia-cms.com/PLATFORM/ce-packs</developerConnection>
     <url>https://git.magnolia-cms.com/projects/PLATFORM/repos/ce-packs</url>
-    <tag>HEAD</tag>
+    <tag>magnolia-packs-community-5.4.x</tag>
   </scm>
 
   <properties>
