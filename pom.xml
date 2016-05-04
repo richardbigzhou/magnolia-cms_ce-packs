@@ -22,6 +22,7 @@
   <properties>
     <magnoliaEdition>Community Edition</magnoliaEdition>
     <magnoliaCEVersion>5.5-SNAPSHOT</magnoliaCEVersion>
+    <javaVersion>1.8</javaVersion>
     <documentationURL>http://documentation.magnolia-cms.com/releases/${project.version}.html</documentationURL>
     <scmTagPrefix>magnolia-packs-community</scmTagPrefix>
     <skipClover>true</skipClover>
