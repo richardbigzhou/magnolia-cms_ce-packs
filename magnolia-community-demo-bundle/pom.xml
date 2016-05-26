@@ -14,8 +14,8 @@
   <description>Magnolia bundled with demo and Apache Tomcat</description>
 
   <properties>
-    <tomcatVersion>7.0.69</tomcatVersion>
-    <tomcatDownloadUrl>https://www.pirbot.com/mirrors/apache/tomcat/tomcat-7/v${tomcatVersion}/bin/apache-tomcat-${tomcatVersion}.tar.gz</tomcatDownloadUrl>
+    <tomcatVersion>7.0.64</tomcatVersion>
+    <tomcatDownloadUrl>https://archive.apache.org/dist/tomcat/tomcat-7/v${tomcatVersion}/bin/apache-tomcat-${tomcatVersion}.tar.gz</tomcatDownloadUrl>
     <magnoliaProjectBundleType>tomcat-bundle</magnoliaProjectBundleType>
   </properties>
 
