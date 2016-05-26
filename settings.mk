@@ -1,0 +1,10 @@
+WEBAPPNAME := ce-packs
+WEBAPPDESC := Community Edition Packs
+GIT := platform/ce-packs.pub
+HOMEPAGE := https://wiki.magnolia-cms.com/display/WIKI/Community+Wiki
+AUTHORINSTNAME := ce-auth
+AUTHORINSTNUM := 0
+PUBLICINSTNAME := ce-pub1
+PUBLICINSTNUM := 1
+WEBAPPWAR := magnolia-community-demo-webapp
+PACKAGER := Pete Ryland <pete.ryland@magnolia-cms.com>
