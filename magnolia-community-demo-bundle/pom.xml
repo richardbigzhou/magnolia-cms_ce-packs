@@ -14,27 +14,31 @@
   <description>Magnolia bundled with demo and Apache Tomcat</description>
 
   <properties>
-    <tomcatVersion>7.0.69</tomcatVersion>
-    <tomcatDownloadUrl>https://archive.apache.org/dist/tomcat/tomcat-7/v${tomcatVersion}/bin/apache-tomcat-${tomcatVersion}.tar.gz</tomcatDownloadUrl>
     <magnoliaProjectBundleType>tomcat-bundle</magnoliaProjectBundleType>
   </properties>
 
   <build>
     <plugins>
       <plugin>
-        <groupId>info.magnolia.maven.plugins</groupId>
-        <artifactId>magnolia-bundle-maven-plugin</artifactId>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
         <executions>
           <execution>
             <id>get-tomcat</id>
             <phase>process-resources</phase>
             <goals>
-              <goal>download</goal>
+              <goal>unpack</goal>
             </goals>
             <configuration>
-              <url>${tomcatDownloadUrl}</url>
-              <downloadDir>tmp</downloadDir>
-              <destDir>${basedir}/target/extracted-tomcat</destDir>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>org.apache.tomcat</groupId>
+                  <artifactId>tomcat</artifactId>
+                  <version>${tomcatVersion}</version>
+                  <type>tar.gz</type>
+                </artifactItem>
+              </artifactItems>
+              <outputDirectory>${basedir}/target/extracted-tomcat</outputDirectory>
             </configuration>
           </execution>
         </executions>
@@ -70,12 +74,12 @@
   </build>
 
   <dependencies>
+    <!-- Depending on tomcat though extracting it manually upon process-resources -->
+    <!-- This dependency also gives hints to README/NOTICE files -->
     <dependency>
       <groupId>org.apache.tomcat</groupId>
       <artifactId>tomcat</artifactId>
-      <version>${tomcatVersion}</version>
-      <!-- This dependency is here to give hints to README/NOTICE files -->
-      <type>pom</type>
+      <type>tar.gz</type>
       <scope>provided</scope>
     </dependency>
     <dependency>
