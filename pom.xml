@@ -25,6 +25,7 @@
     <documentationURL>http://documentation.magnolia-cms.com/releases/${project.version}.html</documentationURL>
     <scmTagPrefix>magnolia-packs-community</scmTagPrefix>
     <skipClover>true</skipClover>
+    <tomcatVersion>7.0.64</tomcatVersion>
   </properties>
 
   <distributionManagement>
@@ -64,6 +65,13 @@
         <artifactId>magnolia-community-demo-webapp</artifactId>
         <version>${project.version}</version>
         <type>pom</type>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.tomcat</groupId>
+        <artifactId>tomcat</artifactId>
+        <version>${tomcatVersion}</version>
+        <type>tar.gz</type>
       </dependency>
     </dependencies>
   </dependencyManagement>
