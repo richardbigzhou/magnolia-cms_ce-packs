@@ -26,7 +26,7 @@
     <documentationURL>http://documentation.magnolia-cms.com/releases/${project.version}.html</documentationURL>
     <scmTagPrefix>magnolia-packs-community</scmTagPrefix>
     <skipClover>true</skipClover>
-    <tomcatVersion>7.0.69</tomcatVersion>
+    <tomcatVersion>8.0.35</tomcatVersion>
   </properties>
 
   <distributionManagement>
