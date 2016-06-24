@@ -23,6 +23,8 @@
         <exclude>webapps/**/*</exclude>
         <!-- exclude .sh scripts which we include below with a specific fileMode -->
         <exclude>bin/*.sh</exclude>
+        <!-- exclude context.xml which we include below with session persistence disabled -->
+        <exclude>conf/context.xml</exclude>
       </excludes>
       <fileMode>644</fileMode>
       <directoryMode>755</directoryMode>
@@ -56,6 +58,14 @@
         <include>**/*.sh</include>
       </includes>
       <fileMode>754</fileMode>
+    </fileSet>
+
+    <fileSet>
+      <directory>src/release/tomcat</directory>
+      <outputDirectory>apache-tomcat-${project.properties.tomcatVersion}</outputDirectory>
+      <includes>
+        <include>conf/context.xml</include>
+      </includes>
     </fileSet>
 
     <!-- readme, license, etc -->
