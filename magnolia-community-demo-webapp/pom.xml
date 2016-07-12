@@ -24,6 +24,12 @@
       <type>pom</type>
     </dependency>
 
+    <!-- Version managed in ui-project (which is indirectly imported) -->
+    <dependency>
+      <groupId>info.magnolia.sample</groupId>
+      <artifactId>magnolia-sample-app</artifactId>
+    </dependency>
+
     <!-- This dependency is not required anymore, but we still maintain it in order to be backwards-compatible.
     The module used to be brought in transitively by mte/stk.
     This dependency will be removed in future versions. -->
